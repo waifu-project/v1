@@ -1,0 +1,14 @@
+[
+  {
+    "msg": "官方维护的资源, 可以保证可用 ✿✿ヽ(°▽°)ノ✿\n注意: 该合集资源中有 18+ 源存在",
+    "title": "官方资源",
+    "url": "https://cdn.jsdelivr.net/gh/waifu-project/v1@latest/yoyo.json",
+    "nsfw": false
+  },
+  {
+    "msg": "此为ZY资源,未得到过验证, 有些源可能不可用",
+    "title": "ZY-Player(新)资源🚀",
+    "url": "https://cdn.jsdelivr.net/gh/cuiocean/ZY-Player-Resources/Sites/Sites.json",
+    "nsfw": false
+  }
+]
