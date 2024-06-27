@@ -21,7 +21,20 @@ jobs:
           wget https://github.com/waifu-project/movie/raw/dev/script/ckbot/go.mod
           wget https://github.com/waifu-project/movie/raw/dev/script/ckbot/go.sum
           wget https://github.com/waifu-project/movie/raw/dev/script/ckbot/main.go
-          go run main.go
+
+      - name: Start run v1 bot script
+        run: go run main.go
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OUTPUT: yoyo.json
+      - name: Auto commit yoyo.json
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add yoyo.json
+          git commit --amend --no-edit
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
